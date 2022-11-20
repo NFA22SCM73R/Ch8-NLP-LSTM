@@ -32,13 +32,18 @@ import json
 # Import required storage package from Google Cloud Storage
 from google.cloud import storage
 
+    
+
 # Initilize flask app
+
+
 app = Flask(__name__)
 # Handles CORS (cross-origin resource sharing)
 CORS(app)
 # Initlize Google cloud storage client
-client = storage.Client()
 
+def authenticate_implicit_with_adc(project_id="steel-ace-369218"):
+        client = storage.Client(project= project_id)
 # Add response headers to accept all types of  requests
 
 def build_preflight_response():
