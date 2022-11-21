@@ -1,20 +1,6 @@
-Problem Statement:
-The goal of this tutorial is to use GitHub to track created and closed issues of a given repository(angular, material-design, angular-cli,D3)
-for the past year along with timeseries forecasting using Tensorflow/LSTM Keras and we will then see how to deploy it to gcloud platform.
 
-Solution:
-Step 1: We are creating three microservices:
-        1. React 
-        2. Flask
-        3. LSTM/Keras
 
-Step 2: What will React do?
-        1. React will retrieve GitHub created and closed issues for a given repository and will display the bar-charts of same using high-charts        
-        2. It will also display the images of the forecasted data for the given GitHub repository and images are being retrieved from GCP storage
-        3. React will make a fetch api call to flask microservice.
-
-Step 3: Prerequisites to work with this application:
-        1:You must have following installed on your computer:
+Steps: 1:You must have following installed on your computer:
            a.Docker(https://www.docker.com/get-started) 
            b.Google Cloud SDK(https://cloud.google.com/sdk/docs/install) 
            c.NodeJs (https://nodejs.org/en/download/) (You must install NodeJS if you want to run React application on your machine)
@@ -41,7 +27,7 @@ Step 3: Prerequisites to work with this application:
                 n. Your version of NPM should be at least 5.2.0 or newer because create-react-app requires that we 
                     have NPX installed. If you have an older version of NPM, run the command to update it:"npm install -g npm"
                       
-Step 4: Deploying React to gcloud platform
+Step 2: Deploying React to gcloud platform
         1: You must have Docker(https://www.docker.com/get-started) and Google Cloud SDK(https://cloud.google.com/sdk/docs/install) 
            installed on your computer. Then, Create a gcloud project and enable the following:
            a.billing account
@@ -77,7 +63,7 @@ Step 4: Deploying React to gcloud platform
 
         
 
-Step 5: To run locally, go to cmd terminal and type following: 
+Step 3: To run locally, go to cmd terminal and type following: 
         1. npm install
         2. change the url of flask of file setupProxy.js to "http://localhost:5000"
         3. npm start 
